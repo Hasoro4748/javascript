@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.반복문</title>
+  <style>
+    table, tr, td ,th{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h3>4.반복문</h3>
+
+  <h4>for</h4>
+  <script>
+    for(let i = 1 ; i <= 5 ; i++){
+      document.write('i : ' + i + '<br>');
+    }
+    // 1부터 10까지 합
+    let sum = 0;
+    for(let i = 1; i<=10; i++){
+      sum += i;
+      document.write('i :' + i + ' :: sum = ' +sum +'<br>');
+    }
+    document.write("<br>");
+    // 1부터 10까지 짝수합
+    
+    sum = 0;
+    for(let i = 2; i<=10; i+=2){
+      sum += i;
+      document.write('i :' + i + ' :: sum = ' +sum +'<br>');
+    }
+    // 별 삼각형
+    let max = 10;
+    for(let i = 0; i<max; i++){
+      for(let x = max; x > i; x--){
+        document.write("　");
+      }
+      for(let j = 0; j <= i*2 ; j++){
+        document.write("★");
+      }
+      document.write("<br>");
+    }
+
+  </script>
+
+  <h4>while</h4>
+  <script>
+    let tot = 0;
+    for(let i = 1; i <= 10; i++){
+      if(i % 2 == 1){
+        continue;
+      }
+      tot += i;
+    }
+    document.write('1부터 10까지 짝수 합 : ' + tot + "<br>");
+  </script>
+  
+  <h4>구구단</h4>
+  <table>
+    <tr>
+      <script>
+        for(let i = 2; i <= 9 ; i++){
+          document.write("<th>" + i + "단</th>");
+        }
+      </script>
+    </tr>
+      <script>
+        for(let i = 1; i <= 9 ; i++){
+          document.write("<tr>")
+          for(let j = 2; j <= 9; j++){
+            document.write("<td>" + j +" x " + i + " = " + (j*i) + "</td>");
+          }
+          document.write("</tr>")
+        }
+      </script>
+  </table>
+</body>
+</html>
