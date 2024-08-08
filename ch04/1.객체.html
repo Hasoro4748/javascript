@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.객체</title>
+  <script src="./js/Account.js"></script>
+</head>
+<body>
+  <h3>1.객체</h3>
+  <script>
+    //클래스 정의 객체
+      let ac = new Account("농협","000-1111-1234", "홍길동",20000);
+      ac.deposit(30000);
+      ac.withdraw(10000);
+      ac.show();
+
+    //사용자 정의객체
+    const sonata = {
+      brand : '소나타',
+      color : '흰색',
+      speed : 0,
+
+      speedUp : function(speed){
+        this.speed += speed;
+      },
+      speedDown : function(speed){
+        this.speed -= speed;
+      },
+      show: function(){
+        document.write('차량명 : ' + this.brand + '<br>');
+        document.write('차량색 : ' + this.color + '<br>');
+        document.write('현재속도 : ' + this.speed + '<br>');
+      }
+    };
+    let a = sonata;
+    a.speedUp(100);
+    a.show();
+  </script>
+</body>
+</html>
